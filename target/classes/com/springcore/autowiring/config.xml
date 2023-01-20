@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xmlns:context="http://www.springframework.org/schema/context"
+		xmlns:p="http://www.springframework.org/schema/p"
+		xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+		
+		<!-- This is our first bean -->
+		
+		<bean name="address" class="com.springcore.autowiring.Address">
+			
+			<property name="street" value="Apanjan"/>
+			<property name="city" value="Chandannagar"/>
+			
+		</bean>
+		
+		<!-- 3 types of Modes
+		
+			1. off - Default
+			2. byName - Matches names with the name of the object with bean name
+			3. byType - Matches type with the object type
+		
+		 -->
+		<bean class="com.springcore.autowiring.Employee" name="emp1" autowire="byName"/>
+		
+
+</beans>

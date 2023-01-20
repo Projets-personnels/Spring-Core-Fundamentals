@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xmlns:context="http://www.springframework.org/schema/context"
+		xmlns:p="http://www.springframework.org/schema/p"
+		xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+		
+		<!-- This is our bean -->
+		
+		<bean class="com.springcore.ci.Certi" name="c1">
+		
+			<constructor-arg value="JAVA EE"/>
+			
+		</bean>
+		
+		
+		
+		<bean class="com.springcore.ci.Person" name="p1">
+		
+			<constructor-arg value="Anurag"/>
+			<constructor-arg value="12"/>
+			<constructor-arg ref="c1"/>
+			<constructor-arg>
+				<list>
+					<value>1236548754</value>
+					<value>1236548554</value>
+					<value>1236548334</value>
+				</list>
+			</constructor-arg>
+		
+		</bean>
+		
+		
+</beans>
